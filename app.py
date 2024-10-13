@@ -1,4 +1,4 @@
-from flask import Flask, render_template, jsonify, request
+ from flask import Flask, render_template, jsonify, request
 from src.helper import download_hugging_face_embeddings
 from langchain_community.vectorstores import Pinecone
 import pinecone
@@ -22,7 +22,7 @@ embeddings = download_hugging_face_embeddings()
 
 #Initializing the Pinecone
 
-os.environ['PINECONE_API_KEY'] = '18f4156e-5f6a-4fb8-a38a-fe6aedd0f3c9'
+os.environ['PINECONE_API_KEY'] = '**enter your api key here**'
 api_key = os.environ['PINECONE_API_KEY']
 os.environ['PINECONE_API_ENV'] = 'us-east-1'
 api_env = os.environ['PINECONE_API_ENV']
